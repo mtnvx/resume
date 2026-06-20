@@ -1,13 +1,17 @@
 # Resume
 
-LaTeX source for my personal resume.
+LaTeX source for my personal resume. The PDF is built automatically by GitHub Actions on every push that modifies `resume.tex` and committed back to the repository as `resume.pdf`.
 
-## Build
+## Build locally
 
-Requires a LaTeX distribution (e.g. [TeX Live](https://tug.org/texlive/) or [MiKTeX](https://miktex.org/)).
+Requires [TeX Live](https://tug.org/texlive/) or any full LaTeX distribution.
 
 ```bash
-pdflatex resume.tex
+latexmk -pdf resume.tex
 ```
 
-Or use [Overleaf](https://overleaf.com) — just upload `resume.tex`.
+To clean up auxiliary files:
+
+```bash
+latexmk -c
+```
