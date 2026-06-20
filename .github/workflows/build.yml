@@ -2,9 +2,12 @@ name: Build PDF
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - "cursor/**"
     paths:
       - "**.tex"
+  workflow_dispatch:
 
 jobs:
   build:
