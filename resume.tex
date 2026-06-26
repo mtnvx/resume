@@ -1,10 +1,22 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{sourcesanspro}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{fontawesome5}
+
+\definecolor{accent}{HTML}{1a3a5c}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfborder={0 0 0},
+}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -21,8 +33,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\large\color{accent}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -52,10 +64,17 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email : \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
-  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} $|$ \href{https://github.com/mtnvx}{github.com/mtnvx} & Mobile : (+421) 915 382 335 \\
-\end{tabular*}
+\begin{center}
+  {\LARGE\bfseries\color{accent} Martin Novák}\\[6pt]
+  \small
+  \faEnvelope\ \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}
+  \quad$|$\quad
+  \faPhone\ (+421) 915 382 335
+  \quad$|$\quad
+  \faLinkedin\ \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk}
+  \quad$|$\quad
+  \faGithub\ \href{https://github.com/mtnvx}{github.com/mtnvx}
+\end{center}
 
 %-----------SUMMARY-----------------
 \section{Summary}
@@ -117,7 +136,7 @@
    \item \textbf{Backend}{: Java, Spring Boot, JPA/Hibernate, REST APIs, PostgreSQL, SQL}
    \item \textbf{Infrastructure \& DevOps}{: Docker, Azure, Jenkins (CI/CD), Gradle, Git}
    \item \textbf{Testing}{: JUnit, Mockito, Appium, Selenium, JMeter}
-   \item \textbf{Other Languages}{: Python, C, JavaScript, PHP}
+   \item \textbf{Other Languages}{: TypeScript, JavaScript, Python, C}
    \item \textbf{Languages (Spoken)}{: Slovak (Native), English (C1), German (B1)}
  \resumeSubHeadingListEnd
 
