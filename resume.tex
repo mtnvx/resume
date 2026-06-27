@@ -1,22 +1,10 @@
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage[T1]{fontenc}
-\usepackage[default]{sourcesanspro}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{fontawesome5}
-
-\definecolor{accent}{HTML}{1a3a5c}
-
-\hypersetup{
-  colorlinks=true,
-  urlcolor=accent,
-  linkcolor=accent,
-  pdfborder={0 0 0},
-}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -33,8 +21,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\color{accent}
-}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -64,17 +52,10 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{center}
-  {\LARGE\bfseries\color{accent} Martin Novák}\\[6pt]
-  \small
-  \faEnvelope\ \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}
-  \quad$|$\quad
-  \faPhone\ (+421) 915 382 335
-  \quad$|$\quad
-  \faLinkedin\ \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk}
-  \quad$|$\quad
-  \faGithub\ \href{https://github.com/mtnvx}{github.com/mtnvx}
-\end{center}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email : \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
+  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} $|$ \href{https://github.com/mtnvx}{github.com/mtnvx} & Mobile : (+421) 915 382 335 \\
+\end{tabular*}
 
 %-----------SUMMARY-----------------
 \section{Summary}
