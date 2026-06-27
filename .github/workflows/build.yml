@@ -17,13 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Tectonic
-        uses: wtfjoke/setup-tectonic@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Compile LaTeX
-        run: tectonic resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
