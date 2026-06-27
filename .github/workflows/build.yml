@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - "**.tex"
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -29,6 +32,7 @@ jobs:
           path: resume.pdf
 
       - name: Commit PDF to repo
+        if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
