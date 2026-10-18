@@ -46,6 +46,16 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+% Summary variants: dev (default), ai, analyst.
+% resume-ai.tex and resume-analyst.tex set \variant and \input this file.
+\ifdefined\variant\else\def\variant{dev}\fi
+
+\newcommand{\summarydev}{Backend software engineer with 2+ years in financial services (Swiss Re, Fiserv): Java/Spring Boot microservices, PostgreSQL performance work, and CI/CD with containerized Azure deployments. Uses AI coding agents and LLMs daily to build and ship faster. Long-term goal: software architect.}
+
+\newcommand{\summaryai}{Software engineer with 2+ years in financial services (Swiss Re, Fiserv) who builds with LLMs daily: AI coding agents, prompt engineering, and LLM API integrations. Backed by production experience with Java/Spring Boot services, PostgreSQL, testing, and CI/CD. Long-term goal: software architect for AI-driven systems.}
+
+\newcommand{\summaryanalyst}{Software engineer with 2+ years in financial services (Swiss Re, Fiserv), most of it spent close to the data: writing and optimizing SQL on PostgreSQL, processing multi-currency transactions, and testing financial reporting logic. Now moving into data and business analyst roles, using LLMs and AI agents daily to automate the repetitive parts. Long-term goal: solutions architect, connecting business needs with system design.}
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -59,7 +69,7 @@
 
 %-----------SUMMARY-----------------
 \section{Summary}
-  \small{Software engineer with 2+ years in financial services (Swiss Re, Fiserv), most of it spent close to the data: writing and optimizing SQL on PostgreSQL, processing multi-currency transactions, and testing financial reporting logic. Now moving into data and business analyst roles. Uses LLMs and AI agents daily to automate workflows and speed up development.}
+  \small{\csname summary\variant\endcsname}
 
 %-----------EDUCATION-----------------
 \section{Education}

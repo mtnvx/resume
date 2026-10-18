@@ -20,18 +20,21 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: |
+            resume.tex
+            resume-ai.tex
+            resume-analyst.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: resume.pdf
+          path: resume*.pdf
 
       - name: Commit PDF to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.pdf
+          git add resume*.pdf
           git diff --staged --quiet || git commit -m "ci: update resume.pdf"
           git push origin HEAD:${{ github.ref_name }}
