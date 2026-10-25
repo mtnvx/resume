@@ -4,7 +4,7 @@
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -46,16 +46,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% Summary variants: dev (default), ai, analyst.
-% resume-ai.tex and resume-analyst.tex set \variant and \input this file.
-\ifdefined\variant\else\def\variant{dev}\fi
-
-\newcommand{\summarydev}{Backend software engineer with 2+ years in financial services (Swiss Re, Fiserv): Java/Spring Boot microservices, PostgreSQL performance work, and CI/CD with containerized Azure deployments. Uses AI coding agents and LLMs daily to build and ship faster. Long-term goal: software architect.}
-
-\newcommand{\summaryai}{Software engineer with 2+ years in financial services (Swiss Re, Fiserv) who builds with LLMs daily: AI coding agents, prompt engineering, and LLM API integrations. Backed by production experience with Java/Spring Boot services, PostgreSQL, testing, and CI/CD. Long-term goal: software architect for AI-driven systems.}
-
-\newcommand{\summaryanalyst}{Software engineer with 2+ years in financial services (Swiss Re, Fiserv), most of it spent close to the data: writing and optimizing SQL on PostgreSQL, processing multi-currency transactions, and testing financial reporting logic. Now moving into data and business analyst roles, using LLMs and AI agents daily to automate the repetitive parts. Long-term goal: solutions architect, connecting business needs with system design.}
-
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -63,21 +53,13 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email : \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
-  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} $|$ \href{https://github.com/mtnvx}{github.com/mtnvx} & Mobile : (+421) 915 382 335 \\
+  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email: \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
+  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} $|$ \href{https://github.com/mtnvx}{github.com/mtnvx} & Mobile: (+421) 915 382 335 \\
 \end{tabular*}
 
 %-----------SUMMARY-----------------
 \section{Summary}
-  \small{\csname summary\variant\endcsname}
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Slovak University of Technology (FEI STU)}{Bratislava, Slovakia}
-      {Bachelor's degree in Computer Science}{09/2022 -- 06/2026}
-  \resumeSubHeadingListEnd
+  \small{Software engineer with 2+ years of experience, mostly in financial services, across backend development, databases, and test automation. Builds Java/Spring Boot services, writes and optimizes SQL on PostgreSQL, and turns business rules such as contract validation, multi-currency transactions, and financial reporting into tested code. Uses LLMs and AI agents daily to automate work and build faster. Long-term goal: software architecture.}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
@@ -88,13 +70,13 @@
       {Backend Software Engineer}{12/2023 -- 04/2025}
       \resumeItemListStart
         \resumeItem{Backend Development}
-          {Designed and implemented Java/Spring Boot microservices for reinsurance contract validation and multi-currency financial transaction processing across distributed business domains.}
+          {Designed and implemented Java/Spring Boot microservices for validating inter-entity reinsurance contracts and processing multi-currency financial transactions across global legal entities.}
         \resumeItem{SQL \& Database Performance}
-          {Refactored PostgreSQL schemas and eliminated N+1 query bottlenecks in legacy migration workflows, measurably reducing migration script runtime by consolidating redundant database calls into a unified execution model.}
-        \resumeItem{CI/CD \& Deployment}
-          {Owned CI/CD pipeline configuration and managed containerized deployment of RESTful APIs to Azure, implementing automated quality gates to enforce code standards across services.}
+          {Refactored PostgreSQL schemas and removed N+1 query bottlenecks in legacy migration workflows by consolidating redundant database calls, significantly reducing migration runtime.}
+        \resumeItem{CI/CD \& Cloud Deployment}
+          {Owned CI/CD pipeline configuration and containerized deployment of RESTful APIs to Azure, adding automated quality gates to enforce code standards across services.}
         \resumeItem{Testing \& Reliability}
-          {Built unit and integration test coverage (JUnit, Mockito) for business-critical financial reporting modules, establishing code coverage targets that prevented production regressions.}
+          {Built unit and integration test coverage (JUnit, Mockito) for business-critical financial reporting modules, setting code coverage targets that prevented production regressions.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -102,9 +84,9 @@
       {Web Developer}{02/2023 -- 06/2023}
       \resumeItemListStart
         \resumeItem{Frontend Engineering}
-          {Maintained and incrementally improved internal Angular applications, resolving UI/UX bugs to optimize vendor workflows for telecommunication asset management.}
+          {Maintained and improved internal Angular applications, fixing UI/UX bugs in vendor workflows for telecommunication asset management.}
         \resumeItem{Data Visualization \& API Integration}
-          {Integrated responsive user interfaces with RESTful web services, handling complex data visualization for hardware specifications, real-time antenna status tracking, and infrastructure digital twins.}
+          {Integrated user interfaces with RESTful web services and handled data visualization for hardware specifications, real-time antenna status tracking, and infrastructure digital twins.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -112,22 +94,31 @@
       {Test Automation Engineer}{06/2022 -- 01/2023}
       \resumeItemListStart
         \resumeItem{Automation Frameworks}
-          {Built automated front-end test suites using Appium and Selenium, covering core user flows and replacing manual regression cycles that previously required full-day testing rounds.}
+          {Built automated front-end test suites with Appium and Selenium covering core user flows, replacing full-day manual regression rounds and cutting testing effort by about 90\%.}
         \resumeItem{Code Refactoring}
-          {Refactored test cases and maintained the framework to improve execution time and ensure reliable CI/CD pipelines via Jenkins.}
+          {Refactored test cases and maintained the framework to reduce execution time and keep Jenkins CI/CD pipelines reliable.}
         \resumeItem{Documentation}
-          {Authored comprehensive technical documentation in Confluence and structured inline code reference guides to facilitate seamless cross-team knowledge sharing.}
+          {Wrote technical documentation in Confluence and inline code reference guides to share knowledge across teams.}
       \resumeItemListEnd
 
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Slovak University of Technology (FEI STU)}{Bratislava, Slovakia}
+      {Bachelor's degree in Computer Science}{09/2022 -- 06/2026}
   \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Technical Skills}
  \resumeSubHeadingListStart
-   \item \textbf{Data \& Analytics}{: SQL, PostgreSQL, Python, data modeling, query optimization, data validation}
+   \item \textbf{Languages}{: Java, SQL, Python, TypeScript, JavaScript, C}
+   \item \textbf{Data \& Analytics}{: PostgreSQL, Pandas, NumPy, data modeling, query optimization, data validation}
+   \item \textbf{Frameworks}{: Spring Boot, JPA/Hibernate, REST APIs, Angular}
    \item \textbf{AI \& LLMs}{: AI agents (Claude Code, Cursor), prompt engineering, LLM APIs (OpenAI, Claude), agentic workflows}
-   \item \textbf{Software Engineering}{: Java, Spring Boot, JPA/Hibernate, REST APIs, TypeScript, JavaScript, C}
-   \item \textbf{Tools \& Testing}{: Git, Docker, Azure, Jenkins (CI/CD), Gradle, JUnit, Mockito, Selenium, Appium, JMeter}
+   \item \textbf{Tools \& Testing}{: Git, Docker, Azure, Jenkins, Gradle, Postman, Jira, JUnit, Mockito, Selenium, Appium, JMeter}
    \item \textbf{Languages (Spoken)}{: Slovak (Native), English (C1), German (B1)}
  \resumeSubHeadingListEnd
 
