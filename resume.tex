@@ -4,7 +4,7 @@
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -53,13 +53,55 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email : \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
-  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} $|$ \href{https://github.com/mtnvx}{github.com/mtnvx} & Mobile : (+421) 915 382 335 \\
+  \textbf{\href{https://linkedin.com/in/mtnvk}{\Large Martin Novák}} & Email: \href{mailto:novak9martin@gmail.com}{novak9martin@gmail.com}\\
+  \href{https://linkedin.com/in/mtnvk}{linkedin.com/in/mtnvk} & Mobile: (+421) 915 382 335 \\
 \end{tabular*}
 
 %-----------SUMMARY-----------------
 \section{Summary}
-  \small{Backend-focused software engineer with 2+ years of experience building and operating Java services, relational data systems, and CI/CD workflows in enterprise environments at Swiss Re and Fiserv. Proven in delivering microservice architectures, optimizing database performance, and maintaining high-quality automated testing pipelines.}
+  \small{Software engineer with 2+ years of experience, mostly in financial services, across backend development, databases, and test automation. Builds Java/Spring Boot services, writes and optimizes SQL on PostgreSQL, and turns business rules such as contract validation, multi-currency transactions, and financial reporting into tested code. Uses LLMs and AI agents daily to automate work and build faster. Long-term goal: software architecture.}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Swiss Re}{Bratislava, Slovakia}
+      {Junior Software Engineer}{12/2023 -- 04/2025}
+      \resumeItemListStart
+        \resumeItem{Backend Development}
+          {Designed and implemented Java/Spring Boot microservices for validating inter-entity reinsurance contracts and processing multi-currency financial transactions across global legal entities.}
+        \resumeItem{SQL \& Database Performance}
+          {Refactored PostgreSQL schemas and removed N+1 query bottlenecks in legacy migration workflows by consolidating redundant database calls, significantly reducing migration runtime.}
+        \resumeItem{CI/CD \& Cloud Deployment}
+          {Owned CI/CD pipeline configuration and containerized deployment of RESTful APIs to Azure, adding automated quality gates to enforce code standards across services.}
+        \resumeItem{Testing \& Reliability}
+          {Built unit and integration test coverage (JUnit, Mockito) for business-critical financial reporting modules, setting code coverage targets that prevented production regressions.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {IT-Development}{Bratislava, Slovakia}
+      {Web Developer}{02/2023 -- 06/2023}
+      \resumeItemListStart
+        \resumeItem{Frontend Engineering}
+          {Maintained and improved internal Angular applications, fixing UI/UX bugs in vendor workflows for telecommunication asset management.}
+        \resumeItem{Data Visualization \& API Integration}
+          {Integrated user interfaces with RESTful web services and handled data visualization for hardware specifications, real-time antenna status tracking, and infrastructure digital twins.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fiserv}{Bratislava, Slovakia}
+      {Test Automation Engineer}{06/2022 -- 01/2023}
+      \resumeItemListStart
+        \resumeItem{Automation Frameworks}
+          {Built automated front-end test suites with Appium and Selenium covering core user flows, replacing full-day manual regression rounds and cutting testing effort by about 90\%.}
+        \resumeItem{Code Refactoring}
+          {Refactored test cases and maintained the framework to reduce execution time and keep Jenkins CI/CD pipelines reliable.}
+        \resumeItem{Documentation}
+          {Wrote technical documentation in Confluence and inline code reference guides to share knowledge across teams.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -69,56 +111,15 @@
       {Bachelor's degree in Computer Science}{09/2022 -- 06/2026}
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Swiss Re}{Bratislava, Slovakia}
-      {Backend Software Engineer}{12/2023 -- 04/2025}
-      \resumeItemListStart
-        \resumeItem{Backend Development}
-          {Designed and implemented Java/Spring Boot microservices for reinsurance contract validation and multi-currency financial transaction processing across distributed business domains.}
-        \resumeItem{Database Systems \& Performance}
-          {Refactored PostgreSQL schemas and eliminated N+1 query bottlenecks in legacy migration workflows, measurably reducing migration script runtime by consolidating redundant database calls into a unified execution model.}
-        \resumeItem{CI/CD \& Deployment}
-          {Owned CI/CD pipeline configuration and managed containerized deployment of RESTful APIs to Azure, implementing automated quality gates to enforce code standards across services.}
-        \resumeItem{Testing \& Reliability}
-          {Built unit and integration test coverage (JUnit, Mockito) for business-critical financial reporting modules, establishing code coverage targets that prevented production regressions.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {IT-Development}{Bratislava, Slovakia}
-      {Web Developer}{02/2023 -- 06/2023}
-      \resumeItemListStart
-        \resumeItem{Frontend Engineering}
-          {Maintained and incrementally improved internal Angular applications, resolving UI/UX bugs to optimize vendor workflows for telecommunication asset management.}
-        \resumeItem{API Integration \& Data Mapping}
-          {Integrated responsive user interfaces with RESTful web services, handling complex data visualization for hardware specifications, real-time antenna status tracking, and infrastructure digital twins.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Fiserv}{Bratislava, Slovakia}
-      {Test Automation Engineer}{06/2022 -- 01/2023}
-      \resumeItemListStart
-        \resumeItem{Automation Frameworks}
-          {Built automated front-end test suites using Appium and Selenium, covering core user flows and replacing manual regression cycles that previously required full-day testing rounds.}
-        \resumeItem{Code Refactoring}
-          {Refactored test cases and maintained the framework to improve execution time and ensure reliable CI/CD pipelines via Jenkins.}
-        \resumeItem{Documentation}
-          {Authored comprehensive technical documentation in Confluence and structured inline code reference guides to facilitate seamless cross-team knowledge sharing.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
 %--------PROGRAMMING SKILLS------------
 \section{Technical Skills}
  \resumeSubHeadingListStart
-   \item \textbf{Backend}{: Java, Spring Boot, JPA/Hibernate, REST APIs, PostgreSQL, SQL}
-   \item \textbf{Infrastructure \& DevOps}{: Docker, Azure, Jenkins (CI/CD), Gradle, Git}
-   \item \textbf{Testing}{: JUnit, Mockito, Appium, Selenium, JMeter}
-   \item \textbf{Other Languages}{: TypeScript, JavaScript, Python, C}
-   \item \textbf{Languages (Spoken)}{: Slovak (Native), English (C1), German (B1)}
+   \item \textbf{Languages}{: Java, SQL, Python, TypeScript, JavaScript, C}
+   \item \textbf{Data \& Analytics}{: PostgreSQL, Pandas, NumPy, data modeling, query optimization, data validation}
+   \item \textbf{Frameworks}{: Spring Boot, JPA/Hibernate, REST APIs, Angular}
+   \item \textbf{AI \& LLMs}{: AI agents (Claude Code, Cursor), prompt engineering, LLM APIs (OpenAI, Claude), agentic workflows}
+   \item \textbf{Tools \& Testing}{: Git, Docker, Azure, Jenkins, Gradle, Postman, Jira, JUnit, Mockito, Selenium, Appium, JMeter}
+   \item \textbf{Languages (Spoken)}{: Slovak (Native), English (C2), German (B1)}
  \resumeSubHeadingListEnd
 
 %-------------------------------------------
